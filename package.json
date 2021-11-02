@@ -1,4 +1,14 @@
 {
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "TS",
   "dependencies": {
     "md5": "^2.3.0"
   }
