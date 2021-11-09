@@ -626,20 +626,20 @@ a:active {
 .continue-wrapper {
     margin-top: 64px;
 }
-#finish-button:disabled {
+.last-button:disabled {
     background-color: rgba(255, 241, 0, 0.35);
     border-color: transparent;
     border-radius: 5px;
 }
-#finish-button {
+.last-button {
     background-color: #FFF100;
     border-color: transparent;
     border-radius: 5px;
 }
-#finish-button:hover {
+.last-button:hover {
     border-color: #FFD700;
 }
-#finish-button:active {
+.last-button:active {
     background-color: #FFD700;
 }
 
@@ -668,8 +668,62 @@ a:active {
 }
 .check-mark {
     position: center;
-    margin-top: 97px;
-    margin-bottom: 158px;
-    margin-left: 164px;
-    margin-right: 164px;
+    margin: 97px 164px 158px;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-wrapper {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+.popup-content {
+    background-color: white;
+    max-width: 770px;
+    max-height: 307px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    border: 6px solid #FFF100;
+}
+.popup-button {
+    margin-left: 250px;
+    width: 71px;
+    height: 67px;
+}
+.popup-exit {
+    width: 71px;
+    height: 67px;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+}
+.image-popup {
+    width: 85px;
+    height: 79px;
+}
+.popup-name {
+    font-size: 6em;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+.popup-text {
+    width: 482px;
+    font-size: 32px;
+}
+input[type=file] {
+    display: none;
 }

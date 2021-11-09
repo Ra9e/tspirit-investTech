@@ -24,6 +24,10 @@ const server = http.createServer(function (request, response) {
    } else if(request.url === '/static/scripts/script.js') {
       const script = fs.readFileSync('static/scripts/script.js', 'utf-8');
       response.end(script);
+   } else if(request.url === '/static/scripts/upload.js') {
+      const uploadScript = fs.readFileSync('static/scripts/upload.js', 'utf-8');
+      console.log(uploadScript);
+      response.end(uploadScript);
    }
    else {
       const html = fs.readFileSync('static/index.html', 'utf-8');
