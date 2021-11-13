@@ -27,12 +27,22 @@ function upload(inputSelector, buttonSelector, options= {}) {
 
     const changeHandler = event => {
         if (!event.target.files.length) return;
-        console.log(event.target.files);
+        //console.log(event.target.files);
 
         const files = Array.from(event.target.files)
         files.forEach(file => {
             if (!file.type.match('image')) return;
-            console.log(file.name);
+            //console.log(file.name);
+
+            const reader = new FileReader();
+            reader.onload = ev => {
+                console.log(ev.target.result);
+
+                /*let buff = Buffer.from(ev.target.result, 'base64');
+                const fs = require('fs');
+                fs.writeFile('my-file.png', buff)*/
+            }
+            reader.readAsDataURL(file);
         })
     }
 
