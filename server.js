@@ -2,13 +2,22 @@
 
 const http = require('http');
 const fs = require('fs');
-const path = require('path');
+const {spawn} = require('child_process')
 
-const express = require('express')
-const app = express();
 
-//let file = path.join(__dirname, '/static/');
-//console.log(file);
+/*const storage = [];
+const py = spawn('python', ['main.py']);
+function runPy() {
+   return py;
+   py.stdout.on('data', function (data) {
+
+      // convert Buffer object to Float
+      storage.push(parseFloat(data));
+      console.log(storage);
+   });
+}
+
+const subprocess = runPy()*/
 
 const server = http.createServer(function (request, response) {
    console.log(request.method, request.url);
@@ -26,7 +35,9 @@ const server = http.createServer(function (request, response) {
       response.end(script);
    } else if(request.url === '/static/scripts/upload.js') {
       const uploadScript = fs.readFileSync('static/scripts/upload.js', 'utf-8');
-      console.log(uploadScript);
+      response.end(uploadScript);
+   } else if(request.url === '/runPython.js ') {
+      const uploadScript = fs.readFileSync('runPython.js', 'utf-8');
       response.end(uploadScript);
    }
    else {

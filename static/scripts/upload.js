@@ -30,9 +30,11 @@ function upload(inputSelector, buttonSelector, options= {}) {
         //console.log(event.target.files);
 
         const files = Array.from(event.target.files)
+        open.innerText = ""
         files.forEach(file => {
             if (!file.type.match('image')) return;
             //console.log(file.name);
+            open.innerText += " " + file.name
 
             const reader = new FileReader();
             reader.onload = ev => {
@@ -49,3 +51,9 @@ function upload(inputSelector, buttonSelector, options= {}) {
     open.addEventListener('click', triggerInput);
     input.addEventListener('change', changeHandler);
 }
+
+
+
+
+
+

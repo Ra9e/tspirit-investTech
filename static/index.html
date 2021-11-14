@@ -23,12 +23,8 @@
             <div class="first-button-wrapper">
                 <p>Страницы 2 и 3</p>
                 <div class="drop-area">
-                    <input type="file" class="files" id="fileUpload">
+                    <input type="file" class="files" id="fileUpload" required>
                     <button class="photo-drop" id="buttonUpload">
-                <!--<input type="button" multiple accept="image/*">-->
-                    <!--<svg class="plus-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 14C6 15.1 6.9 16 8 16C9.1 16 10 15.1 10 14V10H14C15.1 10 16 9.1 16 8C16 6.9 15.1 6 14 6H10V2C10 0.9 9.1 0 8 0C6.9 0 6 0.9 6 2V6H2C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10H6V14Z" fill="#FFF100"/>
-                    </svg>-->
                     <svg class="photo-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.125 11C4.125 11.7563 4.74375 12.375 5.5 12.375C6.25625 12.375 6.875 11.7563 6.875 11V8.25H9.625C10.3813 8.25 11 7.63125 11 6.875C11 6.11875 10.3813 5.5 9.625 5.5H6.875V2.75C6.875 1.99375 6.25625 1.375 5.5 1.375C4.74375 1.375 4.125 1.99375 4.125 2.75V5.5H1.375C0.61875 5.5 0 6.11875 0 6.875C0 7.63125 0.61875 8.25 1.375 8.25H4.125V11Z" fill="#FFF100"/>
                         <path d="M17.875 23.375C20.1532 23.375 22 21.5282 22 19.25C22 16.9718 20.1532 15.125 17.875 15.125C15.5968 15.125 13.75 16.9718 13.75 19.25C13.75 21.5282 15.5968 23.375 17.875 23.375Z" fill="#FFF100"/>
@@ -40,11 +36,8 @@
             <div class="second-button-wrapper">
                 <p>Место регистрации</p>
                 <div class="drop-area">
-                    <input type="file" class="files" id="fileUpload1">
+                    <input type="file" class="files" id="fileUpload1" required>
                     <button class="photo-drop" id="buttonUpload1">
-                        <!--<svg class="plus-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 14C6 15.1 6.9 16 8 16C9.1 16 10 15.1 10 14V10H14C15.1 10 16 9.1 16 8C16 6.9 15.1 6 14 6H10V2C10 0.9 9.1 0 8 0C6.9 0 6 0.9 6 2V6H2C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10H6V14Z" fill="#FFF100"/>
-                        </svg>-->
                         <svg class="photo-icon" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.125 11C4.125 11.7563 4.74375 12.375 5.5 12.375C6.25625 12.375 6.875 11.7563 6.875 11V8.25H9.625C10.3813 8.25 11 7.63125 11 6.875C11 6.11875 10.3813 5.5 9.625 5.5H6.875V2.75C6.875 1.99375 6.25625 1.375 5.5 1.375C4.74375 1.375 4.125 1.99375 4.125 2.75V5.5H1.375C0.61875 5.5 0 6.11875 0 6.875C0 7.63125 0.61875 8.25 1.375 8.25H4.125V11Z" fill="#FFF100"/>
                             <path d="M17.875 23.375C20.1532 23.375 22 21.5282 22 19.25C22 16.9718 20.1532 15.125 17.875 15.125C15.5968 15.125 13.75 16.9718 13.75 19.25C13.75 21.5282 15.5968 23.375 17.875 23.375Z" fill="#FFF100"/>
@@ -91,7 +84,7 @@
                 <div class="small-wrapper">
                     <p class="input-name">Дата рождения</p>
                     <label>
-                        <input type="text" class="small-input-value" placeholder="00/00/0000" required>
+                        <input type="text" class="small-input-value input-value" placeholder="00/00/0000" required>
                     </label>
                 </div>
                 <div class="small-wrapper">
@@ -110,33 +103,33 @@
             <div class="input-wrapper">
                 <p class="input-name">Серия и номер паспорта</p>
                 <label>
-                    <input type="text" class="input-value" placeholder="1234 567890" pattern="\d{1,4}\s\d{1,6}" required>
+                    <input type="text" class="input-value" placeholder="12 34 567890" pattern="\d{1,4}\s\d{1,6}" required>
                 </label>
             </div>
             <div class="input-wrapper">
                 <p class="input-name">Выдан</p>
                 <label>
-                    <input type="text" class="smaller-text-input-value" placeholder="Кем выдан" required>
+                    <input type="text" class="smaller-text-input-value input-value" placeholder="Кем выдан" required>
                 </label>
             </div>
             <div class="inline-input-wrapper">
                 <div class="small-wrapper">
                     <p class="input-name">Дата выдачи</p>
                     <label>
-                        <input type="text" class="small-input-value" placeholder="00/00/0000" required>
+                        <input type="text" class="small-input-value input-value" placeholder="00/00/0000" required>
                     </label>
                 </div>
                 <div class="small-wrapper">
                     <p class="input-name">Код подразделения</p>
                     <label>
-                        <input type="text" class="small-input-value" placeholder="123-456" required>
+                        <input type="text" id="small-input-value" class="small-input-value input-value" placeholder="123-456" required>
                     </label>
                 </div>
             </div>
             <div class="input-wrapper">
                 <p class="input-name">Адрес регистрации</p>
                 <label>
-                    <input type="text" class="smaller-text-input-value" placeholder="Московская Обл. гор. Москва, ул. Московская, д.00" required>
+                    <input type="text" id="smaller-text-input-value" class="smaller-text-input-value input-value" placeholder="Московская Обл. гор. Москва, ул. Московская, д.00" required>
                 </label>
             </div>
             <div class="input-wrapper">
@@ -147,7 +140,7 @@
                 </div>
             </div>
             <div class="continue-wrapper">
-                <button id="finish-button" data-section="third-page" disabled="disabled">Завершить</button>
+                <button class="last-button" id="finish-button" data-section="third-page" disabled="disabled">Завершить</button>
             </div>
         </div>
         </div>
@@ -197,7 +190,9 @@
         </div>
     </div>
 
-
+<!--
+<script src="/static/scripts/runPython.js"></script>
+-->
 <script src="static/scripts/script.js"></script>
 <script src="static/scripts/upload.js"></script>
 
